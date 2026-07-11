@@ -2,11 +2,8 @@
 
 README này mô tả source code OCR dùng LlamaParse để xử lý PDF, ảnh và nhiều định dạng tài liệu sang Markdown/Text, sau đó chuẩn hóa phân trang, heading, bảng, form và metadata để phục vụ các bước xử lý tiếp theo như review, chunking hoặc RAG.
 
-## 1. Mục đích của project
+Nhận đầu vào là **một file** hoặc **một thư mục nhiều file**.
 
-Project này dùng để:
-
-- Nhận đầu vào là **một file** hoặc **một thư mục nhiều file**.
 - Upload từng file lên **Llama Cloud / LlamaParse API**.
 - Parse/OCR nội dung theo từng trang.
 - Xuất kết quả ra `.md` hoặc `.txt`.
@@ -22,12 +19,6 @@ Kết quả chính của pipeline là file OCR dạng:
 
 ```text
 <tên_file_gốc>_llp.md
-```
-
-hoặc nếu chọn text:
-
-```text
-<tên_file_gốc>_llp.txt
 ```
 
 ## 2. Luồng xử lý tổng quát
@@ -92,7 +83,7 @@ Nếu output markdown:
     └── test_heading_rules.py
 ```
 
-## 4. Vai trò từng vùng trong source code
+## 4. Vai trò từng vùng 
 
 ### `main.py`
 
